@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mapping Coltrane</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<div id="container">
+		<button id="zoomout">
+			World View
+		</button>
+
+		<button id="slowmode">
+			Slow Connection - OFF
+		</button>
+
+		<button class="home" id="home">
+			<img class="home" src="icons/home.svg" alt="Home">
+		</button>
+
+		<div id="legend">
+			<img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="Yellow">
+			<p> Biography Location</p>
+
+			<img src="http://maps.google.com/mapfiles/ms/icons/pink-dot.png" alt="Pink">
+			<p> Composed by Coltrane</p>
+
+			<img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt="Blue">
+			<p> Composed by other</p>
+		</div>
+
+		<div id="map"></div>
+
+		<div id="right">
+			<div id="header">
+				<h1>Mapping Coltrane</h1>
+
+				<svg class="arrow" id="left-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="512px" height="512px">
+				  <g>
+				    <g>
+				      <path id="left-arrow-1" d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z" fill="#d2d2d2"/>
+				      <path id="left-arrow-2" d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z" fill="#d2d2d2"/>
+				    </g>
+				  </g>
+				</svg>
+
+				<svg class="arrow" id="right-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="512px" height="512px">
+				  <g>
+				    <g>
+				      <path id="right-arrow-1" d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z" fill="#d2d2d2"/>
+				      <path id="right-arrow-2" d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z" fill="#d2d2d2"/>
+				    </g>
+				  </g>
+				</svg>
+			</div>
+
+			<div id="content-container">
+
+				<div id="default">
+					<p>	John Coltrane is one of the biggest names in music history, and is considered to be one of the greatest jazz saxophonists of all time. </p>
+					<p>From humble beginnings in the South, Coltrane moved to the Northeast, began playing with well-known jazz contemporaries, made a name for himself, and gained global fame. During the later years of his career, Coltrane drew influence from music around the world, namely African, Indian, and Latin American music. </p>
+					<p>Through mapping his life and music, we can see the breadth and reach of his work as well as the trends that defined his career.</p>
+					<hr>
+					<h2>Click on a location marker to learn more about the life and music of John Coltrane,</h2>
+					<h3>or use the arrows to navigate chronologically.</h3>
+					<hr>
+					<a id="sources" href="files/sources.pdf" target="_blank">Sources</a>
+				</div>
+
+				<div class="location" id="nc">
+					<h2>Hamlet, North Carolina</h2>
+					<p class="slide-count">1 of 28</p>
+					<p>Date: September 23, 1926</p>
+					<p>John Coltrane was born in Hamlet, North Carolina on September 23rd, 1926. This location marks the apartment in which Coltrane’s parents had been living for about a year. This building was preserved for several years by Dr. Fred McQueen, but has since been renovated. A plaque now commemorates Coltrane’s birthplace. 
+					</p>
+					<img src="images/birthplace1.png" alt="Birthplace Plaque">
+					<img src="images/birthplace2.png" alt="Birthplace Facade">
+
+					<p>References: [7]</p>
+
+				</div>
+				<div class="location" id="pa1">
+					<h2>Philadelphia, Pennsylvania</h2>
+					<p class="slide-count">2 of 28</p>
+					<p>Date: May, 1943</p>
+					<p>Coltrane moved into this Philadelphia apartment in 1943 after graduating high school. He lived here with his mother, his friend, his cousin Mary, and her mother.  It was in Philadelphia that he first began taking gigs as a saxophonist. Coltrane also attended after-hours jam sessions at clubs frequented by such jazz legends as Duke Ellington and Coleman Hawkins.
+					</p>
+					<img src="images/philly1.png" alt="Philadelphia">
+					<p>References: [7]</p>
+				</div>
+				<div class="location" id="oahu">
+					<h2>Oahu, Hawaii</h2>
+					<p class="slide-count">3 of 28</p>
+					<p>Date: August, 1945</p>
+					<p>Coltrane enlisted in the Navy in 1945, just before his 20th birthday. He was discharged about a year later, but spent his military stint stationed in Oahu, Hawaii. Coltrane’s earliest confirmed recordings were created here at a military radio station. The other musicians were all fellow members of the Navy.
+					</p>
+					<img src="images/navy.jpg" alt="Hawaii">
+					<p>References: [7]</p>
+				</div>
+		
+				<div class="location" id="pa2">
+					<h2>Philadelphia, Pennsylvania</h2>
+					<p class="slide-count">4 of 28</p>
+					<p>Date: July 24, 1952</p>
+					<p>Coltrane purchased a house in the Philadelphia Strawberry Mansion neighborhood at the age of 25. He held jam sessions here that were attended by Dizzy Gillespie, Charlie Parker, and Sonny Rollins. This house is now considered a historical landmark, but has recently fallen into disrepair. Here, Coltrane recorded such albums with Miles Davis as Round Midnight, Relaxin', and Workin'.
+					</p>
+					<img src="images/philly2.png" alt="Philadelphia">
+					<img src="images/philly3.png" alt="Philadelphia">
+					<p>References: [7]</p>
+				</div>
+				<div class="location" id="stockholm">
+					<h2>Värmland County, Sweden</h2>
+					<p class="slide-count">5 of 28</p>
+					<p>Recorded: June 5, 1956</p>
+					<p>Song: <span class="bold">Dear Old Stockholm</span></p> 
+					<p>This traditional Swedish song from the 1840s was originally known as “Ack Värmeland, du sköna", which translates to “Oh Värmland, You Lovely”. Several other jazz musicians adopted this song and recorded their own versions, including Stan Getz and Miles Davis. The unique melody from traditional versions can clearly be heard in Coltrane’s rendition. 
+					</p>
+					
+					<iframe class="video" width="420" height="315" src="https://www.youtube.com/embed/kDMBoJLec5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					<p class="label">Dear Old Stockholm - John Coltrane</p>
+					<audio class="audio" controls src="audio/dear-old-stockholm.mp3"></audio>
+
+					<p>References: [1] [9]</p>
+
+				</div>
+				<div class="location" id="miss">
+					<h2>Money, Mississippi</h2>
+					<p class="slide-count">6 of 28</p>
+					<p>Recorded: May 31, 1957</p>
+					<p>Song: <span class="bold">Bakai</span></p>
+					<p>The title of this song, originally composed by Calvin Massey, means “cry” in Arabic. It was written in response to the murder of Emmett Till, a young African-American boy who was killed for supposedly whistling at a white woman in Mississippi. This song marks one of the first in a trend of Coltrane responding to relevant American and world issues through his music.
+					</p>
+					<p class="label">Bakai</p>
+					<audio class="audio" controls src="audio/bakai.mp3"></audio>
+
+					<p>References: [1] [10] [11]</p>
+				</div>
+				<div class="location" id="nyc1">
+					<h2>West 103rd St., New York City</h2>
+					<p class="slide-count">7 of 28</p>
+					<p>Date: August 23, 1957</p>
+					<p>Coltrane moved to this apartment in 1957 at the age of 30. He lived here with his wife, Naima, and his daughter Saeeda. Some of his most famous albums were recorded while he lived here, including Blue Train and Giant Steps.</p>
+					<p>References: [7]</p>
+				</div>
+				<div class="location" id="paris">
+					<h2>Paris, France</h2>
+					<p class="slide-count">8 of 28</p>
+					<p>Recorded: December 20, 1957</p>
+					<p>Song: <span class="bold">Under Paris Skies</span></p>
+					<p>This song was originally written by French composer Hubert Giraud for the film Sous le ciel de Paris. It was later performed by many American artists, including the Ray Draper Quintet featuring John Coltrane. The melody is reminiscent of neo-classical French music  </p>
+					<iframe class="video" width="420" height="315" src="https://www.youtube.com/embed/gt1tGiS8dIo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					<p>References: [1] [12]</p>
+				</div>
+				<div class="location" id="fivespot">
+					<h2>Five Spot Cafe, New York City</h2>
+					<p class="slide-count">9 of 28</p>
+					<p>Date: July - December, 1957</p>
+					<p>In late 1957, Coltrane joined Thelonious Monk and played in his quartet at the Five Spot Cafe in New York City. A few recordings have been released of Coltrane at the Five Spot, including one recorded by Coltrane’s wife, Naima, titled “Live at the Five Spot - Discovery!”.</p>
+					<p class="label">Trinkle Tinkle - Thelonious Monk and John Coltrane</p>
+					<audio class="audio" controls src="audio/trinkle-tinkle.mp3"></audio>
+					<p>References: [2]</p>
+					
+				</div>
+				<div class="location" id="russ">
+					<h2>Talachyn, Belarus (formerly USSR)</h2>
+					<p class="slide-count">10 of 28</p>
+					<p>Recorded: February 7, 1958</p>
+					<p>Song: <span class="bold">Russian Lullaby</span></p>
+					<p>This song was composed by the legendary Irving Berlin, who was born in what is now Talachyn, Belarus (formerly a Soviet state). The original lyrics hint at the oppressive nature of Russia, and yearn for “a land that’s free for you and me”. This song was adopted by Jerry Garcia, who often performed it live, as well as Coltrane in his 1958 album Soultrane.
+					</p>
+					<p class="label">Russian Lullaby - John Coltrane</p>
+					<audio class="audio" controls src="audio/russian-lullaby.mp3"></audio>
+					<iframe class="video" width="420" height="315" src="https://www.youtube.com/embed/S072YgXIvsQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					<p>References: [1] [13]</p>
+				</div>
+				<div class="location" id="ghana">
+					<h2>Accra, Ghana</h2>
+					<p class="slide-count">12 of 28</p>
+					<p>Recorded: June 24, 1958</p>
+					<p>Song: <span class="bold">Gold Coast</span></p>
+					<p>This song, named after the British colonial title for Ghana, was composed by Curtis Fuller. It is the second track on Coltrane’s collaborative album with Wilbur Harden, titled Gold Coast. The drummer, Art Taylor, provides percussion that is distinctly African in its influence, before leaning into a more standard jazz feel. </p>
+					<p class="label">Gold Coast</p>
+					<audio class="audio" controls src="audio/gold-coast.mp3"></audio>
+
+					<p>References: [1] [14]</p>
+				</div>
+				<div class="location" id="tanganyika">
+					<h2>Dar es Salaam, Tanzania</h2>
+					<p class="slide-count">11 of 28</p>
+					<p>Recorded: June 24, 1958</p>
+					<p>Song: <span class="bold">Tanganyika Strut</span></p>
+					<p>This song, written by Curtis Fuller, is the first track on the record Gold Coast, a collaborative effort with Wilbur Harden. The title refers to the sovereign state that comprised much of modern-day Tanzania. While the song itself is a straightforward jazz tune, the album itself is conceptually tied to Africa, along with all the track titles.</p>
+					<p class="label">Tanganyika Strut</p>
+					<audio class="audio" controls src="audio/tanganyika-strut.mp3"></audio>
+
+					<p>References: [1] [14]</p>
+				</div>
+				<div class="location" id="bahia">
+					<h2>Salvador, Bahia</h2>
+					<p class="slide-count">13 of 28</p>
+					<p>Recorded: December 26, 1958</p>
+					<p>Song: <span class="bold">Bahia</span></p>
+					<p>This Brazilian song was written by Ary Barroso in 1938, and was originally titled Na Baixa do Sapateiro (In the Shoemaker’s Hollow). This title comes from a street in Salvador, Bahia where many cobblers worked. Salvador is home to the highest percentage of Afro-Brazilians in Brazil, and remains a hub for for many African cultures and traditions.</p>
+					<p>Almost 40% of slaves captured from West Africa were sent to brazil, and many were processed through Bahia. This ode to Bahia features a distinct samba feel, a staple of Brazilian music.</p>
+					<p class="label">Bahia</p>
+					<audio class="audio" controls src="audio/bahia.mp3"></audio>
+
+					<p>References: [1] [14] [20]</p>
+				</div>
+				<div class="location" id="nyc2">
+					<h2>Central Park West, New York City</h2>
+					<p class="slide-count">14 of 28</p>
+					<p>Recorded: October 24, 1960</p>
+					<p>Song: <span class="bold">Central Park West</span></p>
+					<p>Recorded in 1960 for his eventual 1964 album Coltrane’s Sound, Coltrane’s Central Park West “encapsulates a lazy, meditative walk through Manhattan’s garden retreat”. At the time of recording, Coltrane had just moved out of his apartment located on West 103rd Street, not far from the titular avenue.</p>
+					<iframe class="video" width="420" height="315" src="https://www.youtube.com/embed/rz3Q1efswzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+					</iframe>
+
+					<p>References: [1] [15]</p>
+				</div>
+				<div class="location" id="liberia">
+					<h2>Monrovia, Liberia</h2>
+					<p class="slide-count">15 of 28</p>
+					<p>Recorded: October 26, 1960</p>
+					<p>Song: <span class="bold">Liberia</span></p>
+					<p>This song appeared on Coltrane’s 1964 album Coltrane’s Sound, and was recorded in 1960. Throughout the song, drummer Elvin Jones utilizes colorful percussive elements reminiscent of West African rhythms. Although it is not overtly influenced by African music, it is one of the many Coltrane pieces that is a tribute, in name, to African cultures.
+					</p>
+					<iframe class="video" width="420" height="315" src="https://www.youtube.com/embed/RgL88el-UbQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+					</iframe>
+
+					<p>References: [1] [14]</p>
+				</div>
+				<div class="location" id="africa">
+					<h2>Africa/Dial Africa</h2>
+					<p class="slide-count">16 of 28</p>
+					<p>Recorded/Debuted: June 24, 1958 - May 23, 1961</p>
+					<p>Songs: <span class="bold">Africa, Dial Africa</span></p>
+					<p>Perhaps the biggest culmination of Coltrane’s African influence was his 1961 conceptual album Africa/Brass. It is perhaps his most adventurous album, featuring a full big band orchestra. His use of African rhythms throughout, and specifically on the titular track, Africa, was inspired by his friend, Yoruban percussionist, Babatunde Olatunji.</p>
+					<p>Wilbur Harden’s Dial Africa was recorded by Coltrane in 1958, and carried a similar conceptual weight. Coltrane’s African influence can also be seen through his spirituality, with Coltrane citing Olatunji and African cultures as influential in that regard.</p>
+					<p class="label">Africa</p>
+					<audio class="audio" controls src="audio/africa.mp3"></audio>
+					<iframe class="video" width="420" height="315" src="https://www.youtube.com/embed/uklwwBRXwdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+					</iframe>
+
+					<p>References: [1] [2] [8] [14]</p>
+				</div>
+				<div class="location" id="railroad">
+					<h2>Church Creek, Maryland</h2>
+					<p class="slide-count">17 of 28</p>
+					<p>Recorded: May 23, 1961</p>
+					<p>Song: <span class="bold">Song of the Underground Railroad</span></p>
+					<p>Coltrane’s recording of this traditional spiritual appeared on a 1961 reissue of his conceptual album Africa/Brass. This location marks the birthplace of Harriet Tubman, which is now the “Harriet Tubman Underground Railroad National Historical Park”. Coltrane, once again, showcases the influence of African and African-American culture on his music.</p>
+					<p class="label">Song of the Underground Railroad</p>
+					<audio class="audio" controls src="audio/song-of-the-underground-railroad.mp3"></audio>
+
+					<p>References: [1] [14]</p>
+				</div>
+				<div class="location" id="dahomey">
+					<h2>Abomey, Benin</h2>
+					<p class="slide-count">18 of 28</p>
+					<p>Recorded: May 25, 1961</p>
+					<p>Song: <span class="bold">Dahomey Dance</span></p>
+					<p>This song is an ode to the Kingdom of Dahomey, which is now known as the Republic of Benin. Prior to European colonization and the slave trade, Dahomey was closely tied to the Yoruba Empire, which became very important to Coltrane later on in his career.  The Kingdom of Dahomey produced a vast amount of architecture, art, literature, dance, and music. </p>
+					<p class="label">Dahomey Dance</p>
+					<audio class="audio" controls src="audio/dahomey-dance.mp3"></audio>
+
+					<p>References: [1] [14]</p>
+				</div>
+				<div class="location" id="ole">
+					<h2>Andalusia, Spain</h2>
+					<p class="slide-count">19 of 28</p>
+					<p>Recorded: May 25, 1961</p>
+					<p>Song: <span class="bold">Ole</span></p>
+					<p>This song is the title track off Coltrane’s 1961 album Ole. It is on this track that Coltrane’s interest in Spanish music is most apparent. The structure of this song is borrowed from the Andalusian song El Vito. </p>
+					<p>The song features a recurring ostinato theme, over which Coltrane plays modal riffs (a mixture of harmonic minor and phrygian) that are distinctly Spanish. It was during this time period that Coltrane began to play more modally, inspired by both Spanish and Indian music.</p>
+					<p class="label">Ole</p>
+					<audio class="audio" controls src="audio/ole.mp3"></audio>
+
+					<p>References: [1] [16]</p>
+				</div>
+				<div class="location" id="india">
+					<h2>Varanasi, India</h2>
+					<p class="slide-count">20 of 28</p>
+					<p>Recorded: October 21, 1960 - October, 1965</p>
+					<p>Songs: <span class="bold">India, Om, My Favorite Things</span></p>
+					<p>In the early 1960’s, Coltrane’s music began to take a dramatic turn away from harmonic emphasis and playing over standard chord changes to modal playing and emphasis on interesting melodies. Integral to this shift was Coltrane’s interest in the music of Ravi Shankar. Shankar, noted for popularizing Hindustani (North Indian) music in America in the 60s, helped Coltrane integrate classical Indian techniques into his music. This location marks the birthplace of Shankar.
+					</p>
+					<p>Three notable songs that utilize Indian devices are India, Om, and My Favorite Things. India, based on a recorded Vedic chant, was first played at the Village Vanguard in 1961, and showcases a huge emphasis on Indian modes and “ragas” (melodic concepts). </p>
+					<p>Om, which refers to the sacred syllable used in Hinduism, was recorded in 1965, and is overt in its integration of Indian religion. It is said that Coltrane’s intention with his “modal phase” and use of Indian motifs is to expand the listener’s consciousness. </p>
+					<p>My Favorite Things, a rendition of the famous Hammerstein and Rodgers tune, uses drone tones and modality to inspire a Hindustani feel. The song begins in E minor, but shifts to E major for the solo section, over which Coltrane plays stunning modal riffs.</p>
+					<p class="label">India</p>
+					<audio class="audio" controls src="audio/india.mp3"></audio>
+					<p class="label">Om</p>
+					<audio class="audio" controls src="audio/om.mp3"></audio>
+					<p class="label">My Favorite Things</p>
+					<audio class="audio" controls src="audio/my-favorite-things.mp3"></audio>
+
+					<p>References: [1] [2] [3] [4] [5] [6] [8]</p>
+				</div>
+				<div class="location" id="brasilia">
+					<h2>Brasilia, Brazil</h2>
+					<p class="slide-count">21 of 28</p>
+					<p>Debuted: November 1, 1961</p>
+					<p>Song: <span class="bold">Brasilia</span></p>
+					<p>Coltrane’s ode to the Brazilian capital was recorded at the Village Vanguard in 1961, yet there is some uncertainty as to who composed it: Coltrane or his fellow performer Eric Dolphy. Musical devices reminiscent of Schoenberg appear in the track, which Dolphy was interested in. Nevertheless, several Latin American musical devices, specifically rhythmic ones, appear throughout Brasilia. </p>
+					<p class="label">Brasilia</p>
+					<audio class="audio" controls src="audio/brazilia.mp3"></audio>
+
+					<p>References: [1] [17]</p>
+
+				</div>
+				<div class="location" id="vanguard">
+					<h2>Village Vanguard, New York City</h2>
+					<p class="slide-count">22 of 28</p>
+					<p>Date: November 1-5, 1961</p>
+					<p>In October of 1961, Coltrane began a residency with his quintet at the Village Vanguard in New York City, a famous venue. On November 2nd and 3rd, Coltrane’s sets were recorded and compiled into his first live album Coltrane “Live” at the Village Vanguard. This era marked a new, more experimental direction in which Coltrane took his music.</p>
+					<p class="label">Spiritual - Live at the Village Vanguard</p>
+					<audio class="audio" controls src="audio/spiritual.mp3"></audio>
+
+					<p>References: [1] [2]</p>
+				</div>
+				<div class="location" id="japan">
+					<h2>Nagasaki, Japan</h2>
+					<p class="slide-count">23 of 28</p>
+					<p>Date: July, 1966</p>
+					<p>In 1966, Coltrane went on a tour in Japan, noted for his energy and passion throughout. Not only did Coltrane play peaceful songs such as Peace on Earth, but he also visited visited the Nagasaki war memorial to pray for the dead. Coltrane and his tour, to this day, serve as a landmark of peace and healing and Japan. </p>
+					<img src="images/pray.jpg" alt="Praying at War Memorial">
+
+					<p>References: [1] [2] [18]</p>
+				</div>
+				<div class="location" id="tunji">
+					<h2>Ancient Yoruba (now Nigeria)</h2>
+					<p class="slide-count">24 of 28</p>
+					<p>Performed: April 23, 1967</p>
+					<p>Song: <span class="bold">Tunji</span></p>
+					<p>Coltrane dedicated this song to his good friend Babatunde Olatunji, a Nigerian Yoruba percussionist. This location marks the birthplace of Olatunji. Coltrane later helped Olatunji open an African cultural center in Harlem, which was the site of Coltrane’s last live recording, at which he played this song.</p>
+					<p class="label">Tunji</p>
+					<audio class="audio" controls src="audio/tunji.mp3"></audio>
+
+					<p>References: [1] [8] [14]</p>
+
+				</div>
+				<div class="location" id="alabama">
+					<h2>Birmingham, Alabama</h2>
+					<p class="slide-count">25 of 28</p>
+					<p>Recorded: November 18, 1963</p>
+					<p>Song: <span class="bold">Alabama</span></p>
+					<p>This poignant piece was recorded in 1963 commemorating the 16th Street Baptist Church Bombing in Birmingham, Alabama, which killed four people. This event helped galvanize the Civil Rights Movement. This recording is considered one of the most prolific in jazz history.</p>
+					<p class="label">Alabama</p>
+					<audio class="audio" controls src="audio/alabama.mp3"></audio>
+
+					<p>References: [1] [14] [19]</p>
+				</div>
+				<div class="location" id="longisland">
+					<h2>Long Island, New York</h2>
+					<p class="slide-count">26 of 28</p>
+					<p>Date: July 6, 1964</p>
+					<p>Coltrane and his wife Alice (he and Naima had divorced) moved to this Long Island house in 1964. It was in this home that Coltrane composed the music for the album A Love Supreme. In 2004, the Huntington Society purchased the house to save it from demolition. The “Coltrane Home” is now a non-profit organization. </p>
+					<img src="images/longisland.png" alt="Long Island Home">
+
+					<p>References: [7]</p>
+				</div>
+				<div class="location" id="ogunde">
+					<h2>Lojoka, Nigeria</h2>
+					<p class="slide-count">27 of 28</p>
+					<p>Recorded: March, 1967</p>
+					<p>Song: <span class="bold">Ogunde</span></p>
+					<p>This song was recorded in March of 1967, just a few months before his death. It is dedicated to the Yoruba deity, Ogun, the god of iron, metal, and war. The song was inspired, in part, by his relationship with Olatunji, who was Yoruba. This location marks Lojoka, which was once home to the Yoruba people.</p>
+					<p class="label">Ogunde</p>
+					<audio class="audio" controls src="audio/ogunde.mp3"></audio>
+
+					<p>References: [1] [14]</p>
+
+				</div>
+				<div class="location" id="huntington">
+					<h2>Huntington, New York</h2>
+					<p class="slide-count">28 of 28</p>
+					<p>Date: July 17, 1967</p>
+					<p>Coltrane died on July 17, 1967 at Huntington Hospital in Long Island. The cause of death - liver cancer - is attributed to hepatitis and heroin use. Coltrane’s death came as a surprise to many in the music industry who had not known about his sickness. He is buried at Pinelawn Cemetery in Farmingdale, New York.</p>
+					<img src="images/grave.jpg" alt="Grave">
+
+					<p>References: [1] [7] [21]</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqLkhjEcvRKL5YzaHCgncjng4MaKAa9bI&callback=initMap">
+	</script>
+</body>
+</html>
